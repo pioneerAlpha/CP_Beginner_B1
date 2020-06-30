@@ -27,6 +27,8 @@ void sieve(int n)
 
 
 //    cout<<"prime\n";
+    
+    prime.clear();
 
     prime.push_back(2);
 
