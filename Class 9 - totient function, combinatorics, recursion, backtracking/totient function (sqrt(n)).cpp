@@ -22,7 +22,7 @@ int main()
     }
     if(n>1){
         ans /= n;
-        ans *= n;
+        ans *= n-1;
     }
     cout<<ans<<endl;
     /// complexity : O(sqrt(n))
