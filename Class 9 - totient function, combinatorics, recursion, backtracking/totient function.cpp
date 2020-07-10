@@ -20,6 +20,6 @@ int main()
             phi[j] = phi[j]*(p-1);
         }
     }
-    complexity : O(n*ln(n))
+    /// complexity : O(n*ln(n))
     return 0;
 }
