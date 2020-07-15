@@ -37,7 +37,7 @@ int main(){
     for(int i = 1; i <=n ; i++){
       cin>>arr[i];
     }
-    bubble(arr,1,n);  
+    insertion(arr,1,n);  
     for(int i = 1 ; i<=n ; i++){
       cout<<arr[i]<<" ";
     }
