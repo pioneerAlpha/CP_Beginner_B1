@@ -26,19 +26,19 @@ int main()
         for(int i = 1 ; i<4 ; i++){
             for(int j = 1 ; j<4 ; j++) cin>>arr[i][j];
         }
-        b[5] , a[5];
+        int b[5] , a[5];
         a[1] = 0;
         for(int i = 1 ; i<4 ; i++) b[i] = arr[1][i] - a[1];
         for(int i = 2 ; i<4 ; i++){
             a[i] = arr[i][1] - b[1];
             for(int j = 2 ; j<4 ; j++){
-                if( a[i] != arr[i][j] - b[j] ){
+                if( a[i] + b[j] != arr[i][j] ){
                     cout<<"No\n";
                     return 0;
                 }
             }
         }
-        cout<<"YES\n";
+        cout<<"Yes\n";
     }
     return 0;
 }
