@@ -1,5 +1,3 @@
-/// problem: given an array of integers and some queries, in each query you are given an integer and asked if the integer exists in the array.
-
 #include<bits/stdc++.h>
 #define fastio ios_base::sync_with_stdio(false),cin.tie(NULL)
 #define endl "\n"
