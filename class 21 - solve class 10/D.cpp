@@ -15,7 +15,7 @@ using namespace std;
 bool vis[N] , col[N];
 
 vector < pair < int , int > > vec[N];
-vector < int > glob[2];
+vector < int > glob[2]; /// glob[0] stores the nodes of color 0 and glob[1] stores the nodes of color 1
 
 pair < int , int > dfs(int nod , int val)
 {
