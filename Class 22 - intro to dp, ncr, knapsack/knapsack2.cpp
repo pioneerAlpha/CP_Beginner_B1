@@ -50,6 +50,7 @@ ll call(int cur , int pro)  /// returns minimum volume needed
 
 int main()
 {
+    memset(dpp,-1,sizeof dpp);
     int cap;
     cin>>n>>cap;
     for(int i = 1 ; i<=n ; i++) cin>>val[i]>>vol[i];
