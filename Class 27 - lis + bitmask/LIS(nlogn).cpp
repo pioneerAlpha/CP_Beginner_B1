@@ -12,7 +12,7 @@
 
 using namespace std;
 
-int arr[N] , dpp[N] , val[N];
+int arr[N] , dpp[N] , val[N] , nxt[N] , idx[N];
 
 int main()
 {
@@ -20,6 +20,7 @@ int main()
     int n;
     cin>>n;
     for(int i = 1 ; i<=n ; i++) cin>>arr[i];
+    memset(idx,-1,sizeof idx);
     val[0] = -MAX;
     for(int i = 1 ; i<=n ; i++) val[i] = MAX;
     for(int i = 1 ; i<=n ; i++){
@@ -31,12 +32,25 @@ int main()
             else rig = mid;
         }
         dpp[i] = rig;
+        nxt[i] = idx[rig-1];
         val[rig] = arr[i];
+        idx[rig] = i;
     }
-    int lis = 0;
-    for(int i = 1 ; i<=n ; i++) lis = max(lis , dpp[i]);
+    int lis = 0 , last;
+    for(int i = 1 ; i<=n ; i++){
+        if(lis < dpp[i]){
+            lis = dpp[i];
+            last = i;
+        }
+    }
+    vector < int > vec;
+    while(last != -1){
+        vec.push_back(last);
+        last = nxt[last];
+    }
+    reverse(vec.begin(),vec.end());
     cout<<lis<<endl;
-    for(int i = 1 ; i<=lis ; i++) cout<<val[i]<<" ";
+    for(int a:vec) cout<<arr[a]<<" ";
     cout<<endl;
     return 0;
 }
