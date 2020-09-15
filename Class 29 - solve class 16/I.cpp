@@ -28,7 +28,6 @@ int call(int mask)
     return dpp[mask] = ans;
 }
 
-bool vis[17];
 
 int main()
 {
