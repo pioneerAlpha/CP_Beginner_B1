@@ -57,7 +57,7 @@ int main()
                 }
             }
             if(tmp == (1<<n)-1){
-                okk[mask] = 1;  /// that means the nodes in the mask cover all the nodes
+                okk[mask] = 1;  /// that means the nodes in this mask cover all the nodes
                 /// if we put a particular virus in the nodes of this mask all the nodes will be infected
             }
             else okk[mask] = 0;
