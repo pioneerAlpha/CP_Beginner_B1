@@ -47,6 +47,7 @@ int main()
     int n , q;
     cin>>n>>q;
     for(int i = 1 ; i<=n ; i++) cin>>arr[i];
+    rmq(n);
     while(q--){
       int l , r;
       cin>>l>>r;
