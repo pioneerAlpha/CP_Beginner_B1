@@ -1,3 +1,7 @@
+///given an array of length n and q queries, in each query you will be given two integers l and r. you have to tell the minimum number in the sub array starting at index l and ending at index r. an additional constant k is given where k = r - l + 1. that is the length of the sub array in queries is always a constant equals to k.
+///here , 1<=n<=10^6 , 1<=q<=10^5 , 1<=k<=n , 1<=l<=r<=n.
+///complexity : O(n + qlogq)
+
 #include<bits/stdc++.h>
 #define ll long long
 #define N ((int)1e5 + 5)
@@ -35,7 +39,7 @@ int main()
         int l = p.first.first, r = p.first.second , idx = p.second;
         while(!deq.empty()){
             pair < int , int > p = deq.front();
-            if(p.second < l) deq.pop_front();
+            if(p.second < l) deq.pop_front(); /// if the index of the element at the front is less than l then pop it
             else break;
         }
 
